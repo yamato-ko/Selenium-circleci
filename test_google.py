@@ -1,19 +1,20 @@
 import pytest
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+#from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
 
 class TestGoogle:
 
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    
 
     def setup_class(cls):
-      cls.driver = webdriver.Chrome(ChromeDriverManager().install())
+      cls.driver = webdriver.Chrome(executable_path="driver/chromedriver.exe")
       cls.driver.maximize_window()
-
+      
     def setup_method(self):
-      self.driver.get("https://google.com")
+      driver = self.driver
+      driver.get("https://google.com")
 
     def test_case(self):
       driver = self.driver
