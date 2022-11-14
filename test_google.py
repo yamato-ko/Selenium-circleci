@@ -9,7 +9,7 @@ class TestGoogle:
     
 
     def setup_class(cls):
-      cls.driver = webdriver.Chrome(executable_path = r"driver\chromedriver.exe")
+      cls.driver = webdriver.Chrome(executable_path = "C:/Users/yamato.kozai/Documents/Github/Selenium-circleci/driver/chromedriver.exe")
       cls.driver.maximize_window()
       
     def setup_method(self):
